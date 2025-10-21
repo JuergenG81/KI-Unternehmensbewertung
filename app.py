@@ -91,7 +91,6 @@ ev_ebitda_manual = st.sidebar.number_input("EV/EBITDA (Peer Median)", min_value=
 st.sidebar.subheader("Daten-Upload (optional)")
 uploaded = st.sidebar.file_uploader(
 
-Jürgen Graber, [21.10.2025 11:08]
 ax1.plot(forecast_df["year"], forecast_df["fcff"], marker="o")
 ax1.set_xlabel("Jahr")
 ax1.set_ylabel("FCFF")
@@ -195,7 +194,7 @@ wacc_low = recompute_equity(max(0.001, wacc - 0.01), terminal_growth, ebitda_mar
 wacc_high = recompute_equity(wacc + 0.01, terminal_growth, ebitda_margin)
 # +/- 50 bp auf g
 g_low = recompute_equity(wacc, terminal_growth - 0.005, ebitda_margin)
-Jürgen Graber, [21.10.2025 11:08]
+
 "Historie/Plan (CSV: year,revenue,ebitda,ebit,depreciation,capex,nwc,debt,cash)",
     type=["csv"]
 )
@@ -318,7 +317,6 @@ st.dataframe(forecast_df.style.format({
 st.subheader("FCFF Verlauf")
 fig1, ax1 = plt.subplots()
 
-Jürgen Graber, [21.10.2025 11:08]
 ax1.plot(forecast_df["year"], forecast_df["fcff"], marker="o")
 ax1.set_xlabel("Jahr")
 ax1.set_ylabel("FCFF")
@@ -422,7 +420,7 @@ wacc_low = recompute_equity(max(0.001, wacc - 0.01), terminal_growth, ebitda_mar
 wacc_high = recompute_equity(wacc + 0.01, terminal_growth, ebitda_margin)
 # +/- 50 bp auf g
 g_low = recompute_equity(wacc, terminal_growth - 0.005, ebitda_margin)
-Jürgen Graber, [21.10.2025 11:08]
+
 "Historie/Plan (CSV: year,revenue,ebitda,ebit,depreciation,capex,nwc,debt,cash)",
     type=["csv"]
 )
