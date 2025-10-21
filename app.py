@@ -423,7 +423,6 @@ g_low = recompute_equity(wacc, terminal_growth - 0.005, ebitda_margin)
 
 "Historie/Plan (CSV: year,revenue,ebitda,ebit,depreciation,capex,nwc,debt,cash)",
     type=["csv"]
-)
 
 # ---------------------------
 # Header & Intro
