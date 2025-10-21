@@ -3,6 +3,23 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date
+# ---- Simple Password Gate via st.secrets (optional) ----
+def check_password():
+    pw = st.secrets.get("APP_PASSWORD", None)
+    if not pw:  # kein Secret gesetzt -> kein Schutz
+        return True
+    with st.sidebar:
+        st.subheader("Login")
+        inp = st.text_input("Passwort", type="password")
+        if st.button("Anmelden"):
+            st.session_state["_auth_ok"] = (inp == pw)
+        if st.session_state.get("_auth_ok", False):
+            st.success("Angemeldet.")
+            return True
+        else:
+            st.stop()
+
+check_password()
 
 st.set_page_config(page_title="KI-Unternehmensbewertung (MVP)", layout="wide")
 
