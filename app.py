@@ -89,7 +89,7 @@ st.sidebar.subheader("Multiplikatoren (optional)")
 ev_ebitda_manual = st.sidebar.number_input("EV/EBITDA (Peer Median)", min_value=0.0, value=6.5, step=0.1, format="%.2f")
 
 st.sidebar.subheader("Daten-Upload (optional)")
-uploaded = st.sidebar.file_uploader("Historie/Plan (CSV: year,revenue,ebit,depreciation,capex,nwc,cash)", type=["csv"]
+uploaded = st.sidebar.file_uploader("Historie/Plan (CSV: year,revenue,ebit,depreciation,capex,nwc,cash)", type=["csv"])
 
 ax1.plot(forecast_df["year"], forecast_df["fcff"], marker="o")
 ax1.set_xlabel("Jahr")
