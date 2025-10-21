@@ -542,7 +542,6 @@ st.dataframe(forecast_df.style.format({
 st.subheader("FCFF Verlauf")
 fig1, ax1 = plt.subplots()
 
-Jürgen Graber, [21.10.2025 11:08]
 g_high = recompute_equity(wacc, terminal_growth + 0.005, ebitda_margin)
 
 sens_df = pd.DataFrame({
