@@ -1,4 +1,3 @@
-Jürgen Graber, [21.10.2025 11:08]
 import streamlit as st
 import pandas as pd
 import numpy as np
